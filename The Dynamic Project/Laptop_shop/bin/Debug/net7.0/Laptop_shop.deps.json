@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Laptop_shop/1.0.0": {
+        "runtime": {
+          "Laptop_shop.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Laptop_shop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
