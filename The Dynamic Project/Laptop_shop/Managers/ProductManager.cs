@@ -24,5 +24,24 @@ namespace Laptop_shop.Managers
             DeleteProduct(product.Id);
             AddProduct(product);
         }
+        public List<Product> GetLast6Products()
+        {
+            List<Product> result = new List<Product>();
+            List<Product> products = ProductRepo.GetAll().Reverse().ToList();
+            for(int i = 0; i <= 5; i++)
+            {
+                result.Append(products[i]);
+            }
+            return result;
+        }
+        public List<Product> GetSelectedProducts()
+        {
+            List<Product> result = new List<Product>();
+            foreach (Product p in ProductRepo.GetAll().Where(x => x.SelectedForHomePage == true))
+            {
+                result.Append(p);
+            }
+            return result;
+        }
     }
 }

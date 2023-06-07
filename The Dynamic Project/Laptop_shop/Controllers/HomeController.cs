@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Laptop_shop.Models;
 using Laptop_shop.Managers;
+using Laptop_shop.ViewModels.Pages;
+using Laptop_shop.Models.Data;
 
 namespace Laptop_shop.Controllers;
 
@@ -11,7 +13,7 @@ public class HomeController : Controller
     private readonly ProductManager _productManager = new ProductManager();
     private readonly UserManager _userManager = new UserManager();
     private readonly AddsManager _addsManager = new AddsManager();
-
+    private readonly ShopInfoManager shopInfoManager = new ShopInfoManager();
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -19,11 +21,20 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
+        HomeViewModel HVM = new HomeViewModel();
+        List<HomePageProducts> hppNormal = new List<HomePageProducts>();
+        List<HomePageProducts> hppBig = new List<HomePageProducts>();
+        List<Product> Last6Products = _productManager.GetLast6Products();
+        foreach(Product p in Last6Products)
+        {
+            hppNormal.Append(new HomePageProducts() { title =  p.Title, description = p.Description,imageData = p.Image1Date , ProductId = p.Id})
+        }
+        foreach(Product p in _productManager.GetSelectedProducts())
+        {
+            hppBig.Append(new HomePageProducts() { title = p.Title, description = p.Description, imageData = p.Image1Date, ProductId = p.Id });
+        }
+        HVM.Products = hppNormal;
+        HVM.BigProducts = hppBig;
         return View();
     }
 

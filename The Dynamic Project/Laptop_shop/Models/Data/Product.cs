@@ -18,6 +18,7 @@ public class Product
     public int RamAmount {get;set;}
     public string Battery {get;set;}
     public int Weight {get;set;}
+    public bool SelectedForHomePage { get;set;}
     public virtual ICollection<int> Categories {get;set;}
     public virtual ICollection<CategoriesAndBrands> CategoriesAndBrands {get;set;}
     public virtual ICollection<Comment> Comments {get;set;}
