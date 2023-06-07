@@ -21,9 +21,7 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\st
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\staticwebassets.pack.json
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\staticwebassets.build.json
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\staticwebassets.development.json
-D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\scopedcss\bundle\Laptop_shop.styles.css
-D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\scopedcss\projectbundle\Laptop_shop.bundle.scp.css
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.dll
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\refint\Laptop_shop.dll
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.pdb
@@ -56,3 +54,4 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\La
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.csproj.GenerateResource.cache
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.try2.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.try3.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.AddsChanged.resources

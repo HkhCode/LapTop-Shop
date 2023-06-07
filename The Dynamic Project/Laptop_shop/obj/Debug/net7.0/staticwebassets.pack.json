@@ -1,12 +1,8 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Laptop_shop.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Laptop_shop.bundle.scp.css"
-    },
-    {
-      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
       "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\favicon.ico",
