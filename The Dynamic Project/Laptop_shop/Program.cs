@@ -2,7 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Shop")));
+services.AddTransient < IUnitOfWork, UnitOfWork > ();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

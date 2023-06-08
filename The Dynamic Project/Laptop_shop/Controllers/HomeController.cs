@@ -27,7 +27,7 @@ public class HomeController : Controller
         List<Product> Last6Products = _productManager.GetLast6Products();
         foreach(Product p in Last6Products)
         {
-            hppNormal.Append(new HomePageProducts() { title =  p.Title, description = p.Description,imageData = p.Image1Date , ProductId = p.Id})
+            hppNormal.Append(new HomePageProducts() { title =  p.Title, description = p.Description,imageData = p.Image1Date , ProductId = p.Id});
         }
         foreach(Product p in _productManager.GetSelectedProducts())
         {

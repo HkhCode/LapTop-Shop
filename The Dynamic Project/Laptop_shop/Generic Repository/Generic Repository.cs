@@ -3,16 +3,10 @@ using System.Data.Entity;
 
 namespace Laptop_shop.Generic_Repository
 {
-    public class Generic_Repository<T> where T : class
+    public class Generic_Repository<T> : IGeneric_Repository<T> where T : class
     {
-        private readonly ApplicationContext _context;
-        private DbSet<T> table;
-        public Generic_Repository()
-        {
-            this._context = new ApplicationContext();
-            table = _context.Set<T>();
-        }
-
+        protected readonly ApplicationContext _context;
+        protected DbSet<T> table;
         public Generic_Repository(ApplicationContext context)
         {
             this._context = context;
@@ -28,7 +22,10 @@ namespace Laptop_shop.Generic_Repository
         {
             return table.Find(id);
         }
-
+        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+        {
+            return context.Set<T>().Where(expression);
+        }
         public void Insert(T obj)
         {
             //It will mark the Entity state as Added State
