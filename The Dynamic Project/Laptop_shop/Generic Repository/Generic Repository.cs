@@ -1,5 +1,6 @@
 ﻿using Laptop_shop.Database;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Laptop_shop.Generic_Repository
 {
@@ -24,7 +25,7 @@ namespace Laptop_shop.Generic_Repository
         }
         public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
-            return context.Set<T>().Where(expression);
+            return table.Where(expression);
         }
         public void Insert(T obj)
         {
@@ -47,5 +48,6 @@ namespace Laptop_shop.Generic_Repository
         {
             _context.SaveChanges();
         }
+
     }
 }

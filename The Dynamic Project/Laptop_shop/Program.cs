@@ -1,9 +1,12 @@
+using System.Configuration;
+using Laptop_shop.Database;
+using Laptop_shop.Unit_Of_Work;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Shop")));
-services.AddTransient < IUnitOfWork, UnitOfWork > ();
+builder.Services.AddTransient < IUnitOfWork, UnitOfWork > ();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

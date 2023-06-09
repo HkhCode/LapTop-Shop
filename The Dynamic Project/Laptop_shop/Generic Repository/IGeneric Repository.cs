@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace Laptop_shop.Generic_Repository
 {
     public interface IGeneric_Repository<T> where T : class

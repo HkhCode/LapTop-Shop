@@ -10,6 +10,11 @@ namespace Laptop_shop.Unit_Of_Work
             _context = context;
 
         }
+        public IAddsRepo AddsRepo
+        {
+            get;
+            private set;
+        }
         public ICardRepo CardRepo
         {
             get;
@@ -40,18 +45,18 @@ namespace Laptop_shop.Unit_Of_Work
             get;
             private set;
         }
-        public IUserRepo userRepo
+        public IUserRepo UserRepo
         {
             get;
             private set;
         }
         public void Dispose()
         {
-            context.Dispose();
+            _context.Dispose();
         }
         public int Save()
         {
-            return context.SaveChanges();
+            return _context.SaveChanges();
         }
     }
 }
