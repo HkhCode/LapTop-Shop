@@ -10,5 +10,17 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
 
         }
+        public List<Adds> GetAdds()
+        {
+            return GetAll().ToList();
+        }
+        public void DeleteAdd(int id)
+        {
+            Delete(id);
+        }
+        public void InsertAdd(Adds add)
+        {
+            Insert(add);
+        }
     }
 }

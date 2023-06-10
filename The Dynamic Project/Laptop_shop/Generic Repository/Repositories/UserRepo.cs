@@ -10,5 +10,17 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             
         }
+        public void AddUser(User user)
+        {
+            Insert(user);
+        }
+        public void UpdateUser(User user)
+        {
+            Update(user);
+        }
+        public User GetUser(int id)
+        {
+            return GetById(id);
+        }
     }
 }

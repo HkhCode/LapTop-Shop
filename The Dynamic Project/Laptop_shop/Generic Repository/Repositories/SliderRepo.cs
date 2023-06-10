@@ -10,5 +10,21 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             
         }
+        public Slider GetSliderData()
+        {
+            return GetAll().ToList()[0];
+        }
+        public void AddSlider(Slider slider)
+        {
+            Insert(slider);
+        }
+        public void DeleteSlider(Slider slider)
+        {
+            Delete(slider);
+        }
+        public void UpdateSlider(Slider slider)
+        {
+            Update(slider);
+        }
     }
 }

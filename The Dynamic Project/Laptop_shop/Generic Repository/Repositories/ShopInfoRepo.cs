@@ -10,5 +10,13 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
 
         }
+        public void UpdateShopInfo(ShopInfo shopInfo)
+        {
+            Update(shopInfo);
+        }
+        public void AddShopInfo(ShopInfo shopInfo)
+        {
+            Insert(shopInfo);
+        }
     }
 }

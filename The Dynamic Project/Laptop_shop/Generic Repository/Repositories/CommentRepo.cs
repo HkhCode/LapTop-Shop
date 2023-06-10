@@ -10,5 +10,13 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             
         }
+        public List<Comment> GetRelatedComments(int ProductId)
+        {
+            return Find(x=> x.ProductId == ProductId).ToList();
+        }
+        public void AddComment(Comment comment)
+        { 
+            Insert(comment);
+        }
     }
 }

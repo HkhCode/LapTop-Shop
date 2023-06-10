@@ -10,5 +10,19 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             
         }
+        public void AddProductToCard(Product product , int CardId) 
+        {
+            Card card = GetById(CardId);
+            card.Products.Add(product);
+            Update(card);
+        }
+        public void addCard(Card card)
+        {
+            Insert(card);
+        }
+        public void DeleteCard(int id)
+        {
+            Delete(id);
+        }
     }
 }

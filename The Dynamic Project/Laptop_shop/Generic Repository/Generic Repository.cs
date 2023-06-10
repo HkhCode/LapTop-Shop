@@ -1,5 +1,6 @@
 ﻿using Laptop_shop.Database;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq.Expressions;
 
 namespace Laptop_shop.Generic_Repository
@@ -12,6 +13,10 @@ namespace Laptop_shop.Generic_Repository
         {
             this._context = context;
             table = _context.Set<T>();
+        }
+        public void Save()
+        {
+            _context.SaveChanges();
         }
 
         public IEnumerable<T> GetAll()
@@ -31,6 +36,7 @@ namespace Laptop_shop.Generic_Repository
         {
             //It will mark the Entity state as Added State
             table.Add(obj);
+            Save();
         }
         public void Delete(object id)
         {
@@ -38,15 +44,11 @@ namespace Laptop_shop.Generic_Repository
             T existing = table.Find(id);
             //This will mark the Entity State as Deleted
             table.Remove(existing);
+            Save();
         }
         public void Update(T obj)
         {
-            table.Remove(obj);
-            table.Add(obj);
-        }
-        public void Save()
-        {
-            _context.SaveChanges();
+            table.AddOrUpdate(obj);
         }
 
     }

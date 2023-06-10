@@ -10,5 +10,17 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
 
         }
+        public List<CategoriesAndBrands> GetAllCABs()
+        {
+            return GetAll().ToList();
+        }
+        public void DeleteCAB(int id)
+        {
+            Delete(id);
+        }
+        public void InsertCAB(CategoriesAndBrands cab)
+        {
+            Insert(cab);
+        }
     }
 }
