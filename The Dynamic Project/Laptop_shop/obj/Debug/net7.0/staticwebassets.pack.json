@@ -9,6 +9,98 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\fonts\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\LICENSE",
+      "PackagePath": "staticwebassets\\fonts"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\README.md",
+      "PackagePath": "staticwebassets\\fonts\\README.md"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Bold.eot",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Bold.eot"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Bold.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Bold.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Bold.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Bold.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Light.eot",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Light.eot"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Light.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Light.woff",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Light.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Light.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Light.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Medium.eot",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Medium.eot"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Medium.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Medium.woff",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Medium.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Medium.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Medium.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Thin.eot",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Thin.eot"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Thin.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Thin.woff",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Thin.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir-Thin.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Vazir-Thin.woff2"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir.eot",
+      "PackagePath": "staticwebassets\\fonts\\Vazir.eot"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Vazir.ttf"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir.woff",
+      "PackagePath": "staticwebassets\\fonts\\Vazir.woff"
+    },
+    {
+      "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\fonts\\Vazir.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Vazir.woff2"
+    },
+    {
       "Id": "D:\\Projects\\Learning\\C#\\Shop\\The Dynamic Project\\Laptop_shop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

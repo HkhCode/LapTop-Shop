@@ -1,4 +1,6 @@
 using Laptop_shop.Generic_Repository.interfaces;
+using Laptop_shop.Generic_Repository.Repositories;
+
 namespace Laptop_shop.Unit_Of_Work
 {
     public interface IUnitOfWork : IDisposable

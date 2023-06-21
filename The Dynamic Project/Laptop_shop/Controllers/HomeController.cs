@@ -1,12 +1,10 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Laptop_shop.Models;
-using Laptop_shop.ViewModels.Pages;
-using Laptop_shop.Models.Data;
 
 namespace Laptop_shop.Controllers;
 
-public class HomeController : Controller
+public class HomeController : BaseController
 {
     private readonly ILogger<HomeController> _logger;
     public HomeController(ILogger<HomeController> logger)
@@ -16,7 +14,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var a = UOW.ProductRepo.Find(x => x.Id == 1).ToList();
+        return View(a);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

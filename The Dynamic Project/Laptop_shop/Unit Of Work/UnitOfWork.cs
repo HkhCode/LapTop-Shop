@@ -1,5 +1,7 @@
 using Laptop_shop.Database;
 using Laptop_shop.Generic_Repository.interfaces;
+using Laptop_shop.Generic_Repository.Repositories;
+
 namespace Laptop_shop.Unit_Of_Work
 {
     public class UnitOfWork : IUnitOfWork
