@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Laptop_shop.Models;
+using Laptop_shop.Models.Data;
 
 namespace Laptop_shop.Controllers;
 
@@ -14,8 +15,8 @@ public class HomeController : BaseController
 
     public IActionResult Index()
     {
-        var a = UOW.ProductRepo.Find(x => x.Id == 1).ToList();
-        return View(a);
+        List<Adds> adds = UOW.AddsRepo.GetAll().ToList();
+        return View(adds);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

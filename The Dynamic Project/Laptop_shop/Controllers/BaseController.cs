@@ -7,7 +7,7 @@ using Laptop_shop.Database;
 
 namespace Laptop_shop.Controllers;
 
-public class BaseController : ControllerBase
+public class BaseController : Controller
 {
     protected readonly UnitOfWork UOW = new UnitOfWork(new ApplicationContext());
 }

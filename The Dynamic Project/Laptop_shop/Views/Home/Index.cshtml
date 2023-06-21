@@ -1,5 +1,9 @@
-﻿@{
+﻿@model List<Laptop_shop.Models.Data.Adds>;
+@{
     Layout = "~/Views/Shared/_UserSide.cshtml";
 }
 
-1
+@foreach(var a in Model)
+{
+    <h1>@a.AddNumber</h1>
+}
