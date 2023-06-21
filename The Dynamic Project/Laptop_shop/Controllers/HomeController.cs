@@ -16,20 +16,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        // HomeViewModel HVM = new HomeViewModel();
-        // List<HomePageProducts> hppNormal = new List<HomePageProducts>();
-        // List<HomePageProducts> hppBig = new List<HomePageProducts>();
-        // List<Product> Last6Products = _productManager.GetLast6Products();
-        // foreach(Product p in Last6Products)
-        // {
-        //     hppNormal.Append(new HomePageProducts() { title =  p.Title, description = p.Description,imageData = p.Image1Date , ProductId = p.Id});
-        // }
-        // foreach(Product p in _productManager.GetSelectedProducts())
-        // {
-        //     hppBig.Append(new HomePageProducts() { title = p.Title, description = p.Description, imageData = p.Image1Date, ProductId = p.Id });
-        // }
-        // HVM.Products = hppNormal;
-        // HVM.BigProducts = hppBig;
         return View();
     }
 
