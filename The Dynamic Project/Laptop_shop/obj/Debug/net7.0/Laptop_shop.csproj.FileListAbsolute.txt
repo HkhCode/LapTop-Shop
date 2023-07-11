@@ -56,3 +56,4 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\La
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.try3.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.AddsChanged.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductChanged.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.SliderTableChanged.resources

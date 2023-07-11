@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Laptop_shop.Models;
 using Laptop_shop.Models.Data;
+using Laptop_shop.ViewModels.Pages;
+using Laptop_shop.Utilities;
 
 namespace Laptop_shop.Controllers;
 
@@ -15,8 +17,26 @@ public class HomeController : BaseController
 
     public IActionResult Index()
     {
+        HomeViewModel HVM = new HomeViewModel();
         List<Adds> adds = UOW.AddsRepo.GetAll().ToList();
-        return View(adds);
+        Slider slider = UOW.SliderRepo.GetAll().ToList()[0];
+        HVM.Adds1Data = ImageAndBytesHandler.ByteArrayToImage(adds[0].ImageData);
+        HVM.Adds2Data = ImageAndBytesHandler.ByteArrayToImage(adds[1].ImageData);
+        HVM.sliderImage1Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image1Data);
+        HVM.Description1 = slider.Description1;
+        HVM.Title1 = slider.Title1;
+        HVM.sliderImage2Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image2Data);
+        HVM.Description2 = slider.Description2;
+        HVM.Title2 = slider.Title2;
+        HVM.sliderImage3Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image3Data);
+        HVM.Description3 = slider.Description3;
+        HVM.Title3 = slider.Title3;
+        ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
+        HVM.ShopPhone = shopInfo.ShopPhone;
+        HVM.ShopEmail = shopInfo.ShopEmail;
+        HVM.Username = null;
+        HVM.pageTitle = "فروشگاه";
+        return View(HVM);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

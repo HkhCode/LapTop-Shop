@@ -12,6 +12,5 @@ public class Slider
     public byte[] Image3Data { get; set; }
     public string Title3 { get; set; }
     public string Description3 { get; set; }
-    public Slider slider { get; set; }
 
 }
