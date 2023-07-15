@@ -4,6 +4,7 @@ using Laptop_shop.Models;
 using Laptop_shop.Models.Data;
 using Laptop_shop.ViewModels.Pages;
 using Laptop_shop.Utilities;
+using System.Runtime.Intrinsics.X86;
 
 namespace Laptop_shop.Controllers;
 
@@ -13,6 +14,7 @@ public class HomeController : BaseController
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+
     }
 
     public IActionResult Index()
@@ -35,10 +37,48 @@ public class HomeController : BaseController
         HVM.ShopPhone = shopInfo.ShopPhone;
         HVM.ShopEmail = shopInfo.ShopEmail;
         HVM.Username = null;
-        HVM.pageTitle = "فروشگاه";
+        HVM.pageTitle = "خانه";
+        List<Product> selectedProducts = UOW.ProductRepo.Find(x => x.SelectedForHomePage == true).ToList();
+        List<HomePageProducts> homePageSelectedProducts = new List<HomePageProducts>();
+        foreach(Product product in selectedProducts)
+        {
+            homePageSelectedProducts.Append(new HomePageProducts { title = product.Title, description = product.Description, imageData = product.Image1Date, ProductId = product.Id });
+
+        }
+        List<Product> recentProducts = UOW.ProductRepo.GetAll().Reverse().ToList().GetRange(0, 3);
+        List<HomePageProducts> homePageRecentProducts = new List<HomePageProducts>();
+        foreach(Product product in recentProducts)
+        {
+            homePageRecentProducts.Append(new HomePageProducts { title = product.Title , description = product.Description , imageData = product.Image1Date,ProductId=product.Id});
+        }
+        HVM.BigProducts = homePageRecentProducts;
+        HVM.Products = homePageSelectedProducts;
         return View(HVM);
     }
-
+    public IActionResult AboutUs()
+    {
+        AboutUsViewModel AVM = new AboutUsViewModel();
+        List<Adds> adds = UOW.AddsRepo.GetAll().ToList();
+        Slider slider = UOW.SliderRepo.GetAll().ToList()[0];
+        AVM.Adds1Data = ImageAndBytesHandler.ByteArrayToImage(adds[0].ImageData);
+        AVM.Adds2Data = ImageAndBytesHandler.ByteArrayToImage(adds[1].ImageData);
+        AVM.sliderImage1Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image1Data);
+        AVM.Description1 = slider.Description1;
+        AVM.Title1 = slider.Title1;
+        AVM.sliderImage2Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image2Data);
+        AVM.Description2 = slider.Description2;
+        AVM.Title2 = slider.Title2;
+        AVM.sliderImage3Data = ImageAndBytesHandler.ByteArrayToImage(slider.Image3Data);
+        AVM.Description3 = slider.Description3;
+        AVM.Title3 = slider.Title3;
+        ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
+        AVM.ShopPhone = shopInfo.ShopPhone;
+        AVM.ShopEmail = shopInfo.ShopEmail;
+        AVM.Username = null;
+        AVM.pageTitle = "درباره ما";
+        AVM.Description = shopInfo.Description;
+        return View(AVM);
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

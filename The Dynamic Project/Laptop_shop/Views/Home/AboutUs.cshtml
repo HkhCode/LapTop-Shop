@@ -1,0 +1,27 @@
+﻿@model Laptop_shop.ViewModels.Pages.AboutUsViewModel;
+
+@{
+    Layout = "~/Views/Shared/_UserSide.cshtml";
+}
+
+<div class="card p-2">
+    <h5 class="card-title text-center">درباره این فروشگاه</h5>
+    <div class="card-text p-3">
+        @Model.Description
+    </div>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>تماس</td>
+                <td>@Model.ShopPhone</td>
+            </tr>
+            <tr>
+                <td>ایمیل</td>
+                <td>
+                    @Model.ShopEmail
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary">استعلام مشخصات فروشگاه</button>
+</div>
