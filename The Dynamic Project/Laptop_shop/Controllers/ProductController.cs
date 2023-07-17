@@ -2,9 +2,9 @@
 
 namespace Laptop_shop.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
             return View();
         }

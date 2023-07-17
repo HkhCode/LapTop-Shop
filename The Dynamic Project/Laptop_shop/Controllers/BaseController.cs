@@ -10,4 +10,5 @@ namespace Laptop_shop.Controllers;
 public class BaseController : Controller
 {
     protected readonly UnitOfWork UOW = new UnitOfWork(new ApplicationContext());
+    protected readonly string UserSessionKey = "UserId";
 }

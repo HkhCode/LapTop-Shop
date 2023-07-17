@@ -4,7 +4,6 @@ using Laptop_shop.Models;
 using Laptop_shop.Models.Data;
 using Laptop_shop.ViewModels.Pages;
 using Laptop_shop.Utilities;
-using System.Runtime.Intrinsics.X86;
 
 namespace Laptop_shop.Controllers;
 

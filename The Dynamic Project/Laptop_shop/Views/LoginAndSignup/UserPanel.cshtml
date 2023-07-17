@@ -1,0 +1,40 @@
+﻿@model Laptop_shop.ViewModels.Pages.UserPanelViewModel;
+@{
+    Layout = "~/Views/Shared/_UserSide.cshtml";
+}
+<div class="card my-2 p-1">
+    <h5 class="card-title text-center">مشخصات کاربری</h5>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>نام</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>نام خانوادگی</td>
+                <td>@Model.Family</td>
+            </tr>
+            <tr>
+                <td>ایمیل</td>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <td>موبایل</td>
+                <td>@Model.Phone</td>
+            </tr>
+            <tr>
+                <td>ویرایش اطلاعات</td>
+                <td>@Html.ActionLink("ویرایش اظلاعات" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-danger"})</td>
+            </tr>
+            <tr>
+                <td>سبد خرید</td>
+                <td>@Html.ActionLink("سبد خرید" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-danger"})</td>
+            </tr>
+            <tr>
+                <td>خروج</td>
+                <td>@Html.ActionLink("خروج از اکانت" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-danger"})</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
