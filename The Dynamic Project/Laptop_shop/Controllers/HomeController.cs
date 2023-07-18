@@ -35,7 +35,7 @@ public class HomeController : BaseController
         ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
         HVM.ShopPhone = shopInfo.ShopPhone;
         HVM.ShopEmail = shopInfo.ShopEmail;
-        HVM.Username = null;
+        HVM.UserId = null;
         HVM.pageTitle = "خانه";
         List<Product> selectedProducts = UOW.ProductRepo.Find(x => x.SelectedForHomePage == true).ToList();
         List<HomePageProducts> homePageSelectedProducts = new List<HomePageProducts>();
@@ -73,7 +73,7 @@ public class HomeController : BaseController
         ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
         AVM.ShopPhone = shopInfo.ShopPhone;
         AVM.ShopEmail = shopInfo.ShopEmail;
-        AVM.Username = null;
+        AVM.UserId = null;
         AVM.pageTitle = "درباره ما";
         AVM.Description = shopInfo.Description;
         return View(AVM);

@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\LoginAndSignup\**" />
+    <Content Remove="Views\LoginAndSignup\**" />
+    <EmbeddedResource Remove="Views\LoginAndSignup\**" />
+    <None Remove="Views\LoginAndSignup\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Entityframework" Version="6.4.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
   </ItemGroup>

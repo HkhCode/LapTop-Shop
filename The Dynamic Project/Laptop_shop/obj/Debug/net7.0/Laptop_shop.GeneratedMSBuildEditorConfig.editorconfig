@@ -24,12 +24,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/LoginAndSignup/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5BbmRTaWdudXBcTG9naW4uY3NodG1s
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/LoginAndSignup/UserPanel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5BbmRTaWdudXBcVXNlclBhbmVsLmNzaHRtbA==
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Panel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Shared/_AdminSide.cshtml]

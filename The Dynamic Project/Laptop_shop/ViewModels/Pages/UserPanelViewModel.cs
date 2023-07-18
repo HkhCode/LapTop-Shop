@@ -6,6 +6,6 @@
         public string Family { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public int UserId { get; set; }
+        public int User_Id { get; set; }
     }
 }

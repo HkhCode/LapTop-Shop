@@ -2,6 +2,7 @@
 @{
     Layout = "~/Views/Shared/_UserSide.cshtml";
 }
+    </nav>
 <div class="card my-2 p-1">
     <h5 class="card-title text-center">مشخصات کاربری</h5>
     <table class="table table-striped">
@@ -24,15 +25,15 @@
             </tr>
             <tr>
                 <td>ویرایش اطلاعات</td>
-                <td>@Html.ActionLink("ویرایش اظلاعات" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-primary"})</td>
+                <td>@Html.ActionLink("ویرایش اطلاعات" , "Index" , "UserEdit" , Model.User_Id , new {@class = "btn btn-primary"})</td>
             </tr>
             <tr>
                 <td>سبد خرید</td>
-                <td>@Html.ActionLink("سبد خرید" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-primary"})</td>
+                <td>@Html.ActionLink("سبد خرید" , "Index" , "UserSignup" , null , new {@class = "btn btn-primary"})</td>
             </tr>
             <tr>
                 <td>خروج</td>
-                <td>@Html.ActionLink("خروج از اکانت" , "Logout" , "LoginAndSignup", htmlAttributes: new {@class = "btn btn-danger"})</td>
+                <td>@Html.ActionLink("خروج" , "Logout" , "Panel" , null , new {@class = "btn btn-danger"})</td>
             </tr>
         </tbody>
     </table>
