@@ -2,7 +2,7 @@
 
 namespace Laptop_shop.Controllers
 {
-    public class UserSignup : Controller
+    public class UserEditController : BaseController
     {
         public IActionResult Index()
         {
