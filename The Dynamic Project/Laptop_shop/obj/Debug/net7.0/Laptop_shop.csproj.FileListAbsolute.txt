@@ -59,3 +59,7 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\La
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.SliderTableChanged.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.UserRole.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.UserChanged.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ChangeProduct.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductChanged1.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductModelChangedAgain.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductModelChanged2.resources

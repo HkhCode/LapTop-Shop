@@ -20,7 +20,14 @@
     <div class="container-fluid p-5 m-5 w-auto">
 <div class="card px-5 py-3">
             <h5 class="card-title text-center">ورود</h5>
-            <p class="text-center w-100" style="background-color: red; color: white;">@Model.Message</p>
+            @{
+                if(Model.Message != null)
+                {
+                    <div class="alert alert-danger text-center" role="alert">
+                        @Model.Message
+                    </div>
+                }
+            }
             <form method="post">
                 @Html.LabelFor(m => m.Email , new {@class = "form-label"})
                 @Html.TextBoxFor(m => m.Email , new {@class = "form-control"})
@@ -30,8 +37,8 @@
 
                 <button type="submit" class="btn btn-primary w-100 my-3">ورود</button>
             </form>
-            <a href="#">اکانت ندارید ؟ ثبت نام کنید ...</a>
-            <a href="#">فراموشی کلمه عبور</a>
+            @Html.ActionLink("اکانت ندارید ؟ ثبت نام کنید ..." , "Index" , "UserSignup")
+            @Html.ActionLink("فراموشی کلمه عبور" , "Index" , "ForgetPassword")
         </div>
     </div>
     </div>

@@ -11,4 +11,6 @@ public class BaseController : Controller
 {
     protected readonly UnitOfWork UOW = new UnitOfWork(new ApplicationContext());
     protected readonly string UserSessionKey = "UserId";
+    protected readonly string ShopEmail = "shopir212112@gmail.com";
+    protected readonly string ShopEmailPassword = "testShop22";
 }

@@ -1,13 +1,12 @@
-using System.ComponentModel.DataAnnotations;
 using Laptop_shop.Models.Enums;
 namespace Laptop_shop.Models.Data;
 
 public class Product
 {
     public int Id { get; set; }
-    public byte[] Image1Date { get; set; }
-    public byte[] Image2Date { get; set; }
-    public byte[] Image3Date { get; set; }
+    public byte[] Image1Data { get; set; }
+    public byte[] Image2Data { get; set; }
+    public byte[] Image3Data { get; set; }
     public string Title {get;set;}
     public string Description {get;set;}
     public int Count {get;set;}
@@ -21,4 +20,5 @@ public class Product
     public bool SelectedForHomePage { get;set;}
     public virtual ICollection<CategoriesAndBrands> Categories {get;set;}
     public virtual ICollection<Comment> Comments {get;set;}
+    public virtual ICollection<Card> Cards { get; set; }
 }

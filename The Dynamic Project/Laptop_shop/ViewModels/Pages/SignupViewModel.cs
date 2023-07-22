@@ -19,5 +19,6 @@ namespace Laptop_shop.ViewModels.Pages
         public string PasswordRepeat { get; set; }
         [Required, Display(Name = "قوانین و مقررات را می پذیرم")]
         public bool AcceptRules { get; set; }
+        public string Message { get; set; } = string.Empty;
     }
 }

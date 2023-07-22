@@ -21,7 +21,15 @@
             <h5 class="card-title text-center">
                 ثبت نام
             </h5>
-            <form>
+            @{
+                if(Model.Message != string.Empty)
+                {
+                    <div class="alert alert-danger text-center" role="alert">
+                        @Model.Message
+                    </div>
+                }
+            }
+            <form method="Post">
                 @Html.LabelFor(m => m.Name , new {@class = "form-label"})
                 @Html.TextBoxFor(m => m.Name , new {@class = "form-control"})
 
@@ -33,13 +41,13 @@
                 @Html.TextBoxFor(m => m.Phone , new {@class = "form-control"})
 
                 @Html.LabelFor(m => m.Password , new {@class = "form-label"})
-                @Html.TextBoxFor(m => m.Password , new {@class = "form-control"})
+                @Html.PasswordFor(m => m.Password , new {@class = "form-control"})
 
                 @Html.LabelFor(m => m.PasswordRepeat , new {@class = "form-label"})
-                @Html.TextBoxFor(m => m.PasswordRepeat , new {@class = "form-control"})
+                @Html.PasswordFor(m => m.PasswordRepeat , new {@class = "form-control"})
                 <div class="my-1">
                     @Html.CheckBoxFor(m=>m.AcceptRules , new {@class = "form-check-input my-1"})
-                    @Html.LabelFor(m=> m.AcceptRules , new {@class = "form-check-label", @id = "acceptRoles"})S
+                    @Html.LabelFor(m=> m.AcceptRules , new {@class = "form-check-label", @id = "acceptRoles"})
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100 my-3">ثبت نام</button>

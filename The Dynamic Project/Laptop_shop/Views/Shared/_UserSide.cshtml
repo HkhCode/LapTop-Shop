@@ -25,24 +25,24 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                        @Html.ActionLink("خانه" , "Index" , "Home" , null , new {@class = "nav-link active"})
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">دسته بندی ها</a>
+                        @Html.ActionLink("دسته بندی ها" , "Index" , "Home" , null , new {@class = "nav-link"})
                     </li>
                     <li class="nav-item">
                         @{
                             if(Model.UserId == null)
                             {
-                                <a class="nav-link" href="#">ورود / ثبت نام</a>
+                                @Html.ActionLink("ورود / ثبت نام" , "Index" , "Login" , null , new {@class = "nav-link"})
                             } else
                             {
-                                <a class="nav-link" href="#">پنل کاربری</a>
+                                @Html.ActionLink("پنل کاربری" , "Index" , "Panel" , null , new {@class = "nav-link"})
                             }
                         }
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">جست و جو</a>
+                        @Html.ActionLink("جست و جو" , "Index" , "Home" , null , new {@class = "nav-link"})
                     </li>
                 </ul>
             </div>

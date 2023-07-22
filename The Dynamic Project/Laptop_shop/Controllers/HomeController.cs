@@ -41,14 +41,14 @@ public class HomeController : BaseController
         List<HomePageProducts> homePageSelectedProducts = new List<HomePageProducts>();
         foreach(Product product in selectedProducts)
         {
-            homePageSelectedProducts.Append(new HomePageProducts { title = product.Title, description = product.Description, imageData = product.Image1Date, ProductId = product.Id });
+            homePageSelectedProducts.Append(new HomePageProducts { title = product.Title, description = product.Description, imageData = product.Image1Data, ProductId = product.Id });
 
         }
         List<Product> recentProducts = UOW.ProductRepo.GetAll().Reverse().ToList().GetRange(0, 3);
         List<HomePageProducts> homePageRecentProducts = new List<HomePageProducts>();
         foreach(Product product in recentProducts)
         {
-            homePageRecentProducts.Append(new HomePageProducts { title = product.Title , description = product.Description , imageData = product.Image1Date,ProductId=product.Id});
+            homePageRecentProducts.Append(new HomePageProducts { title = product.Title , description = product.Description , imageData = product.Image1Data,ProductId=product.Id});
         }
         HVM.BigProducts = homePageRecentProducts;
         HVM.Products = homePageSelectedProducts;

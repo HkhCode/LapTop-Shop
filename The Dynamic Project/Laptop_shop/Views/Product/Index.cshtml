@@ -1,0 +1,100 @@
+﻿@model Laptop_shop.ViewModels.Pages.ProductViewModel;
+@{
+    Layout = "~/Views/Shared/_UserSide.cshtml";
+}
+<div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade w-80 mx-auto">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src=@Model.Image1Data class="w-60 mx-auto d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src=@Model.Image2Data class="w-60 mx-auto d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src=@Model.Image3Data class="w-60 mx-auto d-block" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container-fluid">
+    <div class="card">
+        <h5 class="card-title py-1 px-3">
+            @Model.Title
+        </h5>
+        <div class="card-body">
+            @Model.Description
+        </div>
+    </div>
+</div>
+<table class="table table-striped my-2 mx-1 px-1">
+    <tbody>
+        <tr>
+            <td>پردازنده</td>
+            <td>@Model.CPUModel</td>
+        </tr>
+        <tr>
+            <td>کارت گرافیک</td>
+            <td>@Model.GPUModel</td>
+        </tr>
+        <tr>
+            <td>حافظه رم</td>
+            <td>@Model.RamAmount</td>
+        </tr>
+        <tr>
+            <td>نوع رم</td>
+            <td>@Model.RamType</td>
+        </tr>
+        <tr>
+            <td> هارد</td>
+            <td>@Model.HardDrive</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>باطری</td>
+            <td>@Model.Battery</td>
+        </tr>
+        <tr>
+            <td>وزن</td>
+            <td>@Model.Weight گرم</td>
+        </tr>
+        <tr>
+            <td>کاربرد ها</td>
+            <td>
+                    @{
+                        foreach(var Category in Model.Categories)
+                        {
+                            <p style="display:inline">@Category</p>
+                        }
+                    }
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary my-2 w-100">افزودن به سبد خرید</button>
+<div class="container-fluid">
+    <h5 class="text-center">نظرات کاربران</h5>
+    @{
+        foreach(var Comment in Model.Comments)
+        {
+            <div class="card my-2">
+                <h5 class="card-title mt-1 mx-3">
+                    
+                </h5>
+                <div class="card-body">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                </div>
+            </div>
+        }
+    }
+
+</div>
