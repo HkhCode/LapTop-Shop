@@ -28,7 +28,7 @@ namespace Laptop_shop.Controllers
             ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
             PVM.ShopPhone = shopInfo.ShopPhone;
             PVM.ShopEmail = shopInfo.ShopEmail;
-            PVM.UserId = null;
+            PVM.UserId = HttpContext.Session.GetInt32(UserSessionKey);
             PVM.pageTitle = product.Title;
             PVM.Title = product.Title;
             PVM.Id = product.Id;

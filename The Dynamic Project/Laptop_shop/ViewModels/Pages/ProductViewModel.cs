@@ -19,7 +19,7 @@ namespace Laptop_shop.ViewModels.Pages
         public int RamAmount { get; set; }
         public string Battery { get; set; }
         public int Weight { get; set; }
-        public virtual ICollection<CategoriesAndBrands> Categories { get; set; }
+        public virtual ICollection<Categories> Categories { get; set; }
         public virtual List<CommentsViewModel> Comments { get; set; }
     }
 }

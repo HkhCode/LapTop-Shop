@@ -37,7 +37,7 @@ namespace Laptop_shop.Controllers
                     ShopInfo shopInfo = UOW.ShopInfoRepo.GetAll().ToList()[0];
                     UPVM.ShopPhone = shopInfo.ShopPhone;
                     UPVM.ShopEmail = shopInfo.ShopEmail;
-                    UPVM.UserId = HttpContext.Session.GetInt32(UserSessionKey).ToString();
+                    UPVM.UserId = HttpContext.Session.GetInt32(UserSessionKey);
                     UPVM.pageTitle = "خانه";
                     UPVM.Name = user.Name;
                     UPVM.Family = user.Family;

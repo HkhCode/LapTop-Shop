@@ -1,0 +1,39 @@
+﻿@using Laptop_shop.ViewModels.PreQuesties;
+@model Laptop_shop.ViewModels.Pages.SearchViewModel;
+@{
+    Layout = "~/Views/Shared/_UserSide.cshtml";
+}
+<div class="card my-5 p-3">
+    <form method="post">
+        @Html.TextBoxFor(m => m.SearchExpression , new {@class="form-control my-2" , placeholder="نام محصول مورد نظر را جست و جو کنید"})
+        <button type="submit" class="btn btn-primary w-100">جست و جو</button>
+    </form>
+    @{
+        if(Model.searchPageProducts == null || Model.searchPageProducts.Count() == 0)
+        {
+            <h5 class="w-100 text-center">کالایی یافت نشد :(</h5>
+        }
+        else
+        {
+            foreach(SearchPageProducts spp in Model.searchPageProducts)
+            {
+                <div class="card mb-3 w-100">
+                    <div class="row g-0">
+                        <div class="col-lg-2">
+                            <img src=@spp.ProductImage class="img-fluid rounded-start w-100" alt="...">
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="card-body">
+                                <h5 class="card-title">@spp.ProductTitle</h5>
+                                <p class="card-text">
+                                    @spp.ProductDescription
+                                </p>
+                                @Html.ActionLink("مشاهده محصول" , "Index" , "Product" , spp.Id , new {@class = "btn btn-primary"})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>

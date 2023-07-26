@@ -1,0 +1,27 @@
+﻿@model Laptop_shop.ViewModels.Pages.CategoriesAndBrandsViewModel;
+@using Laptop_shop.Models.Data;
+@{
+    Layout = "~/Views/Shared/_UserSide.cshtml";
+}
+<div class="container-fluid">
+    <div class="card my-3 mx-1">
+        <h5 class="card-title text-center">دسته بندی ها</h5>
+        <div class="row p-2">
+            @{
+                foreach(Categories c in Model.Categories)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12">@Html.ActionLink(c.Title , "FindByCategory" , "CategoriesAndBrands" , c.Id)</div>
+                }
+            }
+        </div>
+        <h5 class="card-title text-center">برند ها</h5>
+        <div class="row p-2">
+            @{
+                foreach(Brand b in Model.Brands)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12">@Html.ActionLink(b.Title , "FindByBrand" , "CategoriesAndBrands" , b.Id)</div>
+                }
+            }
+        </div>
+    </div>
+</div>

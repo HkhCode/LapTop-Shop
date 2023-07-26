@@ -1,4 +1,6 @@
 using Laptop_shop.Models.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Laptop_shop.Models.Data;
 
 public class Product
@@ -18,7 +20,11 @@ public class Product
     public string Battery {get;set;}
     public int Weight {get;set;}
     public bool SelectedForHomePage { get;set;}
-    public virtual ICollection<CategoriesAndBrands> Categories {get;set;}
+    public int Price { get; set; }
+    [ForeignKey("Brand")]
+    public int Brand_Id { get; set; }
+    public virtual Brand Brand { get; set; }
+    public virtual ICollection<Categories> Categories { get; set; }
     public virtual ICollection<Comment> Comments {get;set;}
     public virtual ICollection<Card> Cards { get; set; }
 }

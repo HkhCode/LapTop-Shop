@@ -1,4 +1,5 @@
 ﻿using Laptop_shop.Models.Data;
+using Laptop_shop.Models.Enums;
 using Laptop_shop.Utilities;
 using Laptop_shop.ViewModels.Pages;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,14 @@ namespace Laptop_shop.Controllers
                 if(user.Password == LVM.Password)
                 {
                     HttpContext.Session.SetInt32(UserSessionKey, user.Id);
-                    return Redirect("/Panel/Index");
+                    if(user.Role == Role.User)
+                    {
+                        return Redirect("/Panel/Index");
+                    }
+                    else
+                    {
+                        return Redirect("/Admin/Index");
+                    }
                 }
                 else
                 {

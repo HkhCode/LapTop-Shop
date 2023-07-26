@@ -4,7 +4,7 @@ namespace Laptop_shop.ViewModels
 {
     public class UserSideLayoutModel
     {
-        public string? UserId { get; set; }
+        public int? UserId { get; set; }
         public string Adds1Data { get; set; }
         public string Adds2Data { get; set; }
         public string ShopPhone { get; set; }

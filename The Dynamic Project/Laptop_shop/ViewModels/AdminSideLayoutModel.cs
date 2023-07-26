@@ -2,5 +2,6 @@
 {
     public class AdminSideLayoutModel
     {
+        public string Title { get;set; }
     }
 }

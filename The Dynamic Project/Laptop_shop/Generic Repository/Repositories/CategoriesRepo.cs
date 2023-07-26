@@ -1,16 +1,15 @@
 using Laptop_shop.Models.Data;
 using Laptop_shop.Generic_Repository.interfaces;
 using Laptop_shop.Database;
-using Laptop_shop.Models.Data;
 namespace Laptop_shop.Generic_Repository.Repositories
 {
-    public class CABRepo : Generic_Repository<CategoriesAndBrands> , ICABRepo
+    public class CategoriesRepo : Generic_Repository<Categories> , ICABRepo
     {
-        public CABRepo(ApplicationContext context):base(context)
+        public CategoriesRepo(ApplicationContext context):base(context)
         {
 
         }
-        public List<CategoriesAndBrands> GetAllCABs()
+        public List<Categories> GetAllCABs()
         {
             return GetAll().ToList();
         }
@@ -18,9 +17,13 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             Delete(id);
         }
-        public void InsertCAB(CategoriesAndBrands cab)
+        public void InsertCAB(Categories cab)
         {
             Insert(cab);
+        }
+        public List<Categories> GetAllCategories()
+        {
+            return GetAll().ToList();
         }
     }
 }

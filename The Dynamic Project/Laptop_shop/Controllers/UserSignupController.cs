@@ -47,9 +47,12 @@ namespace Laptop_shop.Controllers
                             user.Family = SVM.Family;
                             user.PhoneNumber = SVM.Phone;
                             user.Role = Role.User;
+                            Card card = new Card();
                             UOW.UserRepo.Insert(user);
                             int UserId = UOW.UserRepo.Find(x => x.Email == user.Email).First().Id;
                             HttpContext.Session.SetInt32(UserSessionKey, UserId);
+                            card.UserId = UserId;
+                            UOW.CardRepo.Insert(card);
                             return Redirect("/Panel/Index");
                         }
                         else

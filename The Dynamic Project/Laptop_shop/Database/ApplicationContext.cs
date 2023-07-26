@@ -11,7 +11,8 @@ namespace Laptop_shop.Database
         }
         public DbSet<Adds> Adds { get; set; }
         public DbSet<Card> Cards { get; set; }
-        public DbSet<CategoriesAndBrands> CategoriesAndBrands { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ShopInfo> ShopInfos { get; set; }

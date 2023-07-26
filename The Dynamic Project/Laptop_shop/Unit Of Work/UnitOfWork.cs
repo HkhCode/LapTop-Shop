@@ -12,14 +12,20 @@ namespace Laptop_shop.Unit_Of_Work
             _context = context;
             AddsRepo = new AddsRepo(_context);
             CardRepo = new CardRepo(_context);
-            CABRepo = new CABRepo(_context);
+            CABRepo = new CategoriesRepo(_context);
             CommentRepo = new CommentRepo(_context);
             ProductRepo = new ProductRepo(_context);
             ShopInfoRepo = new ShopInfoRepo(_context);
             SliderRepo = new SliderRepo(_context);
             UserRepo = new UserRepo(_context);
+            BrandRepo = new BrandRepo(_context);
         }
         public IAddsRepo AddsRepo
+        {
+            get;
+            private set;
+        }
+        public IBrandRepo BrandRepo
         {
             get;
             private set;

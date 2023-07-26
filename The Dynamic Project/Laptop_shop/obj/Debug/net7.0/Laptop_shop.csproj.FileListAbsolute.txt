@@ -63,3 +63,8 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\La
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductChanged1.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductModelChangedAgain.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductModelChanged2.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.ProductPrice.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABChangeTry1.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABChangeTry2.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABTry3.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABTry4.resources
