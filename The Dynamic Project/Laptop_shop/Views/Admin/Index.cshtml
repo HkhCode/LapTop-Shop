@@ -1,0 +1,40 @@
+﻿@{
+    Layout= "~/Views/Shared/_AdminSide.cshtml";
+}
+<div class="card p-3">
+    <h5 class="card-title text-center">
+        تنظبمات فروشگاه
+    </h5>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>تنظیمات کالا</td>
+                <td>@Html.ActionLink("تنظیم" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>تنظیمات دسته بندی</td>
+                <td>@Html.ActionLink("تنظیم" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>تنظیمات 3 پست صفحه اصلی</td>
+                <td>@Html.ActionLink("تنظیم" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>تنظیمات اسلایدر</td>
+                <td>@Html.ActionLink("تنظیم" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>ویرایش اطلاعات فروشگاه</td>
+                <td>@Html.ActionLink("ویرایش" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>تغییر اطلاعات مدیر</td>
+                <td>@Html.ActionLink("تنظیم" , "" , "" , null , new {@class="btn btn-primary"})</td>
+            </tr>
+            <tr>
+                <td>خروج</td>
+                <td>@Html.ActionLink("خروج" , "Logout" , "Admin" , null , new {@class="btn btn-danger"})</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

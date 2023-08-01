@@ -1,0 +1,55 @@
+﻿@using Laptop_shop.Models.Enums;
+@model Laptop_shop.ViewModels.Pages.AddProductViewModel;
+@{
+    Layout = "~/Views/Shared/_AdminSide.cshtml";
+}
+
+<div class="card p-2 my-2">
+    <h5 class="card-title text-center">افزودن محصول</h5>
+    @using(Html.BeginForm("AddProduct" , "Product" , FormMethod.Post ,new {enctype = "multipart/form-data"}))
+    {
+        @Html.LabelFor(m=>m.ProductTitle , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.ProductTitle , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Brand , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.Brand , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Image1Data , new {@class= "form-label w-100"})
+        @Html.TextBoxFor(m=> m.Image1Data , new {@class= "form-label w-100" , type = "file"})
+
+        @Html.LabelFor(m=>m.Image2Data , new {@class= "form-label w-100"})
+        @Html.EditorFor(m=> m.Image2Data , new {@class= "form-label w-100"})
+
+        @Html.LabelFor(m=>m.Image3Data , new {@class= "form-label w-100"})
+        @Html.EditorFor(m=> m.Image3Data , new {@class= "form-label w-100"})
+        <br/>
+        @Html.LabelFor(m=>m.Description , new {@class = "form-label"})
+        @Html.TextAreaFor(m=>m.Description , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.CPU , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.CPU , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.GPU , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.GPU , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.RamAmount , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.RamAmount , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.RamType , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.RamType , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Hard , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.Hard , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Battery , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.Battery , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Weight , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.Weight , new {@class = "form-control"})
+
+        @Html.LabelFor(m=>m.Usages , new {@class= "form-label"})
+        @Html.TextBoxFor(m=>m.Usages , new {@class = "form-control"})
+
+        <button type="submit" class="btn btn-primary w-100 my-2">ذخیره</button>
+    }
+</div>

@@ -43,7 +43,7 @@ namespace Laptop_shop.Controllers
             PVM.RamAmount = product.RamAmount;
             PVM.Battery = product.Battery;
             PVM.Weight = product.Weight;
-            PVM.Categories = product.Categories;
+            PVM.Usage = product.Usages;
             PVM.Comments = new List<CommentsViewModel>();
             foreach(Comment comment in product.Comments)
             {
@@ -54,6 +54,99 @@ namespace Laptop_shop.Controllers
                 PVM.Comments.Append(CVM);
             }
             return View(PVM);
+        }
+        public IActionResult AddProduct()
+        {
+            try
+            {
+                int id = (int)HttpContext.Session.GetInt32(UserSessionKey);
+                if (AdminAuthorize(id))
+                {
+                    AddProductViewModel APVM = new AddProductViewModel();
+                    APVM.Title= "افزودن کالا";
+                    return View(APVM);
+                }
+                else
+                {
+                    return Redirect("/Login/Index");
+                }
+            }
+            catch
+            {
+                return Redirect("/Login/Index");
+            }
+        }
+        [HttpPost]
+        //AddProductViewModel APVM , IFormFile file1, IFormFile file2, 
+        public IActionResult AddProduct([FromForm]AddProductViewModel APVM)
+        {
+            Product product = new Product();
+            product.Title = APVM.ProductTitle;
+            product.CPUModel = APVM.CPU;
+            product.GPUModel = APVM.GPU;
+            product.RamAmount = APVM.RamAmount;
+            switch(APVM.RamType.ToLower())
+            {
+                case "ddr1":
+                    product.RamType = Models.Enums.Ram.ddr1;
+                    break;
+                case "ddr2":
+                    product.RamType = Models.Enums.Ram.ddr2;
+                    break;
+                case "ddr3":
+                    product.RamType = Models.Enums.Ram.ddr3;
+                    break;
+                case "ddr4":
+                    product.RamType = Models.Enums.Ram.ddr4;
+                    break;
+                case "ddr5":
+                    product.RamType = Models.Enums.Ram.ddr5;
+                    break;
+                case "ddr6":
+                    product.RamType = Models.Enums.Ram.ddr6;
+                    break;
+                default:
+                    throw new Exception("Wrong Ram Type !");
+            }
+            product.Battery = APVM.Battery;
+            product.Weight = int.Parse(APVM.Weight);
+            using(MemoryStream ms = new MemoryStream())
+            {
+                APVM.Image1Data.CopyTo(ms);
+                product.Image1Data = ms.ToArray();
+            }
+            using (MemoryStream ms = new MemoryStream())
+            {
+                APVM.Image2Data.CopyTo(ms);
+                product.Image2Data = ms.ToArray();
+            }
+            using (MemoryStream ms = new MemoryStream())
+            {
+                APVM.Image3Data.CopyTo(ms);
+                product.Image3Data = ms.ToArray();
+            }
+            product.Usages = APVM.Usages;
+            product.Description = APVM.Description;
+            try
+            {
+                Brand brand = UOW.BrandRepo.Find(x => x.Title == APVM.Brand).First();
+                product.Brand = brand;
+            }
+            catch
+            {
+                return Redirect("/product/AddProduct");
+            }
+            UOW.ProductRepo.Insert(product);
+            return Redirect("/Admin/Index");
+            
+        }
+        public IActionResult EditProduct(int id)
+        {
+            return View();
+        }
+        public IActionResult DeleteProduct(int id)
+        {
+            return View();
         }
     }
 }

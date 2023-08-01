@@ -29,14 +29,12 @@ namespace Laptop_shop.Controllers
             CABVM.ShopEmail = shopInfo.ShopEmail;
             CABVM.UserId = HttpContext.Session.GetInt32(UserSessionKey);
             CABVM.pageTitle = "دسته بندی ها";
-            CABVM.Categories = UOW.CABRepo.GetAll().ToList();
             CABVM.Brands = UOW.BrandRepo.GetAll().ToList();
             return View(CABVM);
         }
         public IActionResult FindByCategory(int id)
         {
             ProductCategoriesViewModel PCVM = new ProductCategoriesViewModel();
-            Categories Category = UOW.CABRepo.Find(x => x.Id == id).FirstOrDefault();
             List<Adds> adds = UOW.AddsRepo.GetAll().ToList();
             Slider slider = UOW.SliderRepo.GetAll().ToList()[0];
             PCVM.Adds1Data = ImageAndBytesHandler.ByteArrayToImage(adds[0].ImageData);
@@ -54,18 +52,7 @@ namespace Laptop_shop.Controllers
             PCVM.ShopPhone = shopInfo.ShopPhone;
             PCVM.ShopEmail = shopInfo.ShopEmail;
             PCVM.UserId = HttpContext.Session.GetInt32(UserSessionKey);
-            PCVM.pageTitle = Category.Title;
             PCVM.products = new List<CABPoductViewModel>();
-            foreach(Product p in Category.Products)
-            {
-                PCVM.products.Append(new CABPoductViewModel
-                {
-                    Title = p.Title,
-                    Description = p.Description,
-                    Image = ImageAndBytesHandler.ByteArrayToImage(p.Image1Data),
-                    Id = p.Id
-                });
-            }
             return View(PCVM);
         }
         public IActionResult FindByBrand(int id)

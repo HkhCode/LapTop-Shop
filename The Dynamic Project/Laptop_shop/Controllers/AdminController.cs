@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Laptop_shop.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Laptop_shop.Controllers
 {
@@ -6,8 +7,29 @@ namespace Laptop_shop.Controllers
     {
         public IActionResult Index()
         {
-
-            return View();
+            try
+            {
+                int id = (int)HttpContext.Session.GetInt32(UserSessionKey);
+                if(AdminAuthorize(id))
+                {
+                    AdminSideLayoutModel model = new AdminSideLayoutModel();
+                    model.Title = "پنل مدیریت";
+                    return View(model);
+                }
+                else
+                {
+                    return Redirect("/Login/Index");
+                }
+            }
+            catch
+            {
+                return Redirect("/Login/Index");
+            }
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove(UserSessionKey);
+            return Redirect("/Login/Index");
         }
     }
 }

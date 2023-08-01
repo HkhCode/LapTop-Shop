@@ -12,7 +12,6 @@ namespace Laptop_shop.Unit_Of_Work
             _context = context;
             AddsRepo = new AddsRepo(_context);
             CardRepo = new CardRepo(_context);
-            CABRepo = new CategoriesRepo(_context);
             CommentRepo = new CommentRepo(_context);
             ProductRepo = new ProductRepo(_context);
             ShopInfoRepo = new ShopInfoRepo(_context);
@@ -31,11 +30,6 @@ namespace Laptop_shop.Unit_Of_Work
             private set;
         }
         public ICardRepo CardRepo
-        {
-            get;
-            private set;
-        }
-        public ICABRepo CABRepo
         {
             get;
             private set;

@@ -7,7 +7,6 @@ namespace Laptop_shop.Unit_Of_Work
     {
         IAddsRepo AddsRepo {get;}
         ICardRepo CardRepo {get;}
-        ICABRepo CABRepo {get;}
         ICommentRepo CommentRepo {get;}
         IProductRepo ProductRepo {get;}
         IShopInfoRepo ShopInfoRepo {get;}

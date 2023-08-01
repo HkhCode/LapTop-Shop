@@ -18,10 +18,6 @@ namespace Laptop_shop.Generic_Repository.Repositories
         {
             return Find(x=> x.Title == name).ToList();
         }
-        public List<Product> GetByCategory(Categories cab)
-        {
-            return Find(x => x.Categories.Contains(cab)).ToList();
-        }
         public List<Product> GetLast6Products()
         {
             List<Product> products = new List<Product>();

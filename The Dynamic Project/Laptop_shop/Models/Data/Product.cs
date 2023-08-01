@@ -1,5 +1,6 @@
 using Laptop_shop.Models.Enums;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 
 namespace Laptop_shop.Models.Data;
 
@@ -24,7 +25,7 @@ public class Product
     [ForeignKey("Brand")]
     public int Brand_Id { get; set; }
     public virtual Brand Brand { get; set; }
-    public virtual ICollection<Categories> Categories { get; set; }
+    public string Usages { get; set; }
     public virtual ICollection<Comment> Comments {get;set;}
     public virtual ICollection<Card> Cards { get; set; }
 }

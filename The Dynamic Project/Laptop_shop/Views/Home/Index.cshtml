@@ -2,6 +2,10 @@
 @{
     Layout = "~/Views/Shared/_UserSide.cshtml";
 }
+@if(Model.Products == null)
+{
+    <h1>1</h1>
+}
 @foreach(var product in Model.Products)
 {
     <div class="row divCenter">
@@ -9,10 +13,11 @@
             <img src=@product.imageData class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">@product.title</h5>
-                <p class="card-text">
-                    @product.description.Substring(0 , 120);
-                </p>
-                <a href="#" class="btn btn-primary">مشاهده</a>
+                    <p class="card-text">
+                        @product.description
+                    </p>
+
+                @Html.ActionLink("مشاهده" , "Index" , "Product" , product.ProductId , new {@class = "btn btn-primary"})
             </div>
         </div>
     </div>
@@ -28,14 +33,12 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">@product.title</h5>
-                    <p class="card-text">
-                        @product.description
-                    </p>
+                            <p class="card-text">
+                                @product.description
+                            </p>
                     <p class="card-text">
                         <small class="text-body-secondary">
-                            <button class="btn btn-primary">
-                                مشاهده
-                            </button>
+                            @Html.ActionLink("مشاهده" , "Index" , "Product" , product.ProductId , new {@class = "btn btn-primary"})
                         </small>
                     </p>
                 </div>

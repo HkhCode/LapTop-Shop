@@ -68,3 +68,6 @@ D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\La
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABChangeTry2.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABTry3.resources
 D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.CABTry4.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.RemoveCategories1.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.RemoveCategory2.resources
+D:\Projects\Learning\C#\Shop\The Dynamic Project\Laptop_shop\obj\Debug\net7.0\Laptop_shop.Migrations.Change1.resources

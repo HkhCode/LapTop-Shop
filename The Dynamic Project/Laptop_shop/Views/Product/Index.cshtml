@@ -68,14 +68,7 @@
         </tr>
         <tr>
             <td>کاربرد ها</td>
-            <td>
-                    @{
-                        foreach(var Category in Model.Categories)
-                        {
-                            <p style="display:inline">@Category</p>
-                        }
-                    }
-            </td>
+            <td>@Model.Usage</td>
         </tr>
     </tbody>
 </table>
