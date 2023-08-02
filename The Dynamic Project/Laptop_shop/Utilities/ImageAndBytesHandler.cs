@@ -7,13 +7,16 @@ namespace Laptop_shop.Utilities
         public static string ByteArrayToImage(byte[] bytes)
         {
             string base64Data = Convert.ToBase64String(bytes);
-            string dataUrl = string.Format("data:image/png;base64;{0}" , base64Data);
+            string dataUrl = string.Format("data:image/jpg;base64,{0}" , base64Data);
             return dataUrl;
         }
-        public static byte[] ImageToByteArray(string path)
+        public static byte[] ImageToByteArray(IFormFile file)
         {
-            byte[] byteData = System.IO.File.ReadAllBytes(path);
-            return byteData;
+            using(MemoryStream ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                return ms.ToArray();
+            }
         }
     }
 }

@@ -2,29 +2,25 @@
 @{
     Layout = "~/Views/Shared/_UserSide.cshtml";
 }
-@if(Model.Products == null)
-{
-    <h1>1</h1>
-}
+<div class="row divCenter">
 @foreach(var product in Model.Products)
 {
-    <div class="row divCenter">
+        string productHref = $"/product/index/{product.ProductId}";
         <div class="card divDisplayInlineBlock m-1 col-lg-3 col-md-6 col-sm-12">
-            <img src=@product.imageData class="card-img-top" alt="...">
+            <img src="@product.imageData" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">@product.title</h5>
                     <p class="card-text">
                         @product.description
                     </p>
-
-                @Html.ActionLink("مشاهده" , "Index" , "Product" , product.ProductId , new {@class = "btn btn-primary"})
+                <a href=@productHref class="btn btn-primary">مشاهده</a>
             </div>
         </div>
-    </div>
 }
-
+</div>
 @foreach(var product in Model.BigProducts)
 {
+    string productHref = $"/product/index/{product.ProductId}";
     <div class="card mb-3 w-100">
         <div class="row g-0">
             <div class="col-md-4">
@@ -38,7 +34,7 @@
                             </p>
                     <p class="card-text">
                         <small class="text-body-secondary">
-                            @Html.ActionLink("مشاهده" , "Index" , "Product" , product.ProductId , new {@class = "btn btn-primary"})
+                            <a href=@productHref class="btn btn-primary">مشاهده</a>
                         </small>
                     </p>
                 </div>

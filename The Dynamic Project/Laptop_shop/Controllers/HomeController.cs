@@ -13,7 +13,6 @@ public class HomeController : BaseController
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-
     }
 
     public IActionResult Index()
@@ -50,7 +49,7 @@ public class HomeController : BaseController
             {
                 des = product.Description.Substring(0, 60);
             }
-            homePageSelectedProducts.Add(new HomePageProducts { title = product.Title, description = des, imageData = product.Image1Data, ProductId = product.Id });
+            homePageSelectedProducts.Add(new HomePageProducts { title = product.Title, description = des, imageData = ImageAndBytesHandler.ByteArrayToImage(product.Image1Data), ProductId = product.Id });
 
         }
         List<Product> recentProducts = UOW.ProductRepo.GetAll().Reverse().ToList().GetRange(0, 3);
@@ -66,7 +65,7 @@ public class HomeController : BaseController
             {
                 des = product.Description.Substring(0,60);
             }
-            homePageRecentProducts.Add(new HomePageProducts { title = product.Title , description = des , imageData = product.Image1Data,ProductId=product.Id});
+            homePageRecentProducts.Add(new HomePageProducts { title = product.Title , description = des , imageData =ImageAndBytesHandler.ByteArrayToImage( product.Image1Data),ProductId=product.Id});
         }
         HVM.BigProducts = homePageRecentProducts;
         HVM.Products = homePageSelectedProducts;

@@ -20,20 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Brands/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEFkZENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Brands/FindByBrand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEZpbmRCeUJyYW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Brands/FindByCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEZpbmRCeUNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Brands/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/Card/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/CategoriesAndBrands/FindByBrand.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc0FuZEJyYW5kc1xGaW5kQnlCcmFuZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/CategoriesAndBrands/FindByCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc0FuZEJyYW5kc1xGaW5kQnlDYXRlZ29yeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/CategoriesAndBrands/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc0FuZEJyYW5kc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Learning/C\#/Shop/The Dynamic Project/Laptop_shop/Views/ForgetPassword/Index.cshtml]
